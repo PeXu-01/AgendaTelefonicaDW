@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="416dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="32dp" />
+
+        <EditText
+            android:id="@+id/edtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtNombre"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:hint="Teléfono"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="73dp" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtTelefono"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="130dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="449dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/btnElegirMapa"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="385dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:onClick="elegirMapa"
+            android:text="Elegir Coordenadas"
+            tools:layout_editor_absoluteX="239dp"
+            tools:layout_editor_absoluteY="319dp" />
+
+        <EditText
+            android:id="@+id/edtLatitud"
+            android:layout_width="386dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Latitud"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="203dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <EditText
+            android:id="@+id/edtLongitud"
+            android:layout_width="386dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Longitud"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="203dp"
+            tools:layout_editor_absoluteY="290dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="421dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="155dp"
+            android:layout_height="144dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/iconavatar"
+            tools:layout_editor_absoluteX="143dp"
+            tools:layout_editor_absoluteY="344dp" />
+
+        <Button
+            android:id="@+id/btnElegir"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="230dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:text="Elegir Imagen"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="371dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="383dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/btnAñadir"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:onClick="insertaBD"
+            android:text="Añadir Contacto"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="465dp" />
+
+        <Button
+            android:id="@+id/btnLista"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="380dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/btnAñadir"
+            android:layout_alignStart="@+id/btnAñadir"
+            android:layout_alignLeft="@+id/btnAñadir"
+            android:layout_gravity="fill_horizontal|center|fill"
+            android:text="Lista de Contactos"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="512dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

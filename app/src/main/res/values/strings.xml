@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Agenda Telefónica</string>
+    <string name="title_activity_maps">Google Maps</string>
+    <string name="marker_detail_latlng">(%1$.2f, %2$.2f)</string>
+    <string name="title_activity_maps2">Trazar Rutas</string>
+</resources>
